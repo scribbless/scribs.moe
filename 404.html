@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>page not found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.typekit.net/lyp5naw.css">
+  <style>
+    * {
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    html {
+      color: rgb(255, 255, 255);
+      display: table;
+      font-family: open-sans;
+      height: 100%;
+      text-align: center;
+      width: 100%;
+    }
+
+    body {
+      display: table-cell;
+      vertical-align: middle;
+      margin: 2em auto;
+    }
+
+    h1 {
+      font-family: open-sans;
+      font-weight: 700;
+      color: rgb(255, 255, 255);
+      font-size: 7em;
+      font-weight: 400;
+    }
+
+    p1 {
+      font-family: open-sans;
+      font-size: 2.5em;
+      color: rgb(255, 255, 255);
+      margin: 0 auto;
+      width: 280px;
+    }
+
+    #bgVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -999;
+      -webkit-filter: blur(6px);
+      -moz-filter: blur(6px);
+      -o-filter: blur(6px);
+      -ms-filter: blur(6px);
+      filter: blur(6px);
+    }
+
+    @media only screen and (max-width: 280px) {
+
+      body,
+      p {
+        width: 95%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin: 0 0 0.3em;
+      }
+
+    }
+
+    .gradient {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(170deg, #83bce9d7, #c089dbd7);
+      background-size: 400% 400%;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+
+      -webkit-animation: GradientAnim 6s ease infinite;
+      -moz-animation: GradientAnim 6s ease infinite;
+      animation: GradientAnim 6s ease infinite;
+    }
+
+    @-webkit-keyframes GradientAnim {
+      0% {
+        background-position: 43% 0%
+      }
+
+      50% {
+        background-position: 58% 100%
+      }
+
+      100% {
+        background-position: 43% 0%
+      }
+    }
+
+    @-moz-keyframes GradientAnim {
+      0% {
+        background-position: 43% 0%
+      }
+
+      50% {
+        background-position: 58% 100%
+      }
+
+      100% {
+        background-position: 43% 0%
+      }
+    }
+
+    @keyframes GradientAnim {
+      0% {
+        background-position: 43% 0%
+      }
+
+      50% {
+        background-position: 58% 100%
+      }
+
+      100% {
+        background-position: 43% 0%
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>404</h1>
+  <p1>Page not found</p1>
+  <div class="gradient"></div>
+  <script src="js/gradient.js"></script>
+  <video id="bgVideo" oncontextmenu="return false;" preload="true" autoplay loop muted>
+    <source src="img/sucy404.mp4" type="video/mp4">
+  </video>
+</body>
+
+</html>
+<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->

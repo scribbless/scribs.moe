@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>discord</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/lyp5naw.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        html {
+            background-color: #23272A;
+            display: table;
+            font-family: open-sans;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        #text {
+            font-family: open-sans;
+            font-weight: 700;
+            color: #7289DA;
+            font-size: 7em;
+            font-weight: 400;
+            background-color: #23272A;
+            border: none;
+        }
+
+        p1 {
+            font-family: open-sans;
+            font-size: 1.5em;
+            font-style: italic;
+            color: #7289DA;
+            margin: 0 auto;
+            width: 280px;
+            display: block;
+            font-style: center;
+
+        }
+
+        @media only screen and (max-width: 280px) {
+
+            body,
+            p {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
+            }
+
+        }
+
+        #text:focus {
+            outline: none;
+        }
+
+        .tooltip {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .tooltip .tooltip__content {
+            background-color: #00000042;
+            border-radius: 8px;
+            bottom: 150%;
+            color: #fff;
+            left: 50%;
+            margin-left: -9%;
+            opacity: 0;
+            padding: 0.5rem;
+            position: absolute;
+            text-align: center;
+            width: 130px;
+            z-index: 1;
+            font-size: 1rem;
+            font-family: open-sans;
+        }
+
+        .tooltip .tooltip__content::after {
+            border-width: 5px;
+            border-style: solid;
+            border-color: #00000042 transparent transparent transparent;
+            content: "";
+            left: 50%;
+            margin-left: -5px;
+            position: absolute;
+            top: 100%;
+        }
+
+        .tooltip .tooltip__content {
+            opacity: 0;
+            visibility: visible;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+</head>
+
+<body>
+    <script>
+        let clipboard = new ClipboardJS('.tooltip');
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <script>
+        function btnClick() {
+            $('#tooltipLabel').fadeTo(80, 1, function () {
+                $(this).delay(1000).fadeTo(80, 0);
+            });
+        }
+    </script>
+    <button onClick="btnClick()" class="tooltip" id="text" data-clipboard-text="scribbles#7377"><b>scribbles</b>#7377<span
+            class="tooltip__content" id="tooltipLabel">Copied!</span></button>
+    <p1>click to copy to clipboard</p1>
+</body>
+
+</html>
+<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->
